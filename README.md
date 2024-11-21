@@ -15,7 +15,9 @@ Let's start by creating a basic Flask application that connects to a MySQL datab
 
 **File Structure: Create the following file structure for the project:**
 
-multi-container-app/
+multi-container
+
+-app/
 ├── app/
 
 │   ├── app.py
@@ -31,4 +33,29 @@ multi-container-app/
 **Writing the Flask Application.**
 In the app/app.py file, write a simple Flask API that connects to a MySQL database:
 
+**Flask Dependencies.**
+In app/requirements.txt, add the required dependencies:
 
+
+# Step 2: Initializing the MySQL Database.
+
+To set up the initial database and table structure, we’ll use an SQL script in the db/init.sql file:
+
+# Step 3: Configuring Docker Compose.
+
+Docker Compose makes it easy to run multi-container applications. In this project, we’ll set up two services:
+
+- `web` service for the Flask app
+- `db` service for the MySQL database
+In the root directory, create docker-compose.yml:
+
+# Step 4: Creating a Dockerfile for Flask.
+
+In the app folder, create a Dockerfile to define the Flask app container:
+
+# Step 5: Building and Running the Application.
+With all files in place, it's time to build and run the multi-container application.
+
+Open a terminal, navigate to the project directory, and run:
+
+`docker-compose up --build`
