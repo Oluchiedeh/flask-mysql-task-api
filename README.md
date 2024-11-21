@@ -56,6 +56,22 @@ In the app folder, create a Dockerfile to define the Flask app container:
 # Step 5: Building and Running the Application.
 With all files in place, it's time to build and run the multi-container application.
 
-Open a terminal, navigate to the project directory, and run:
+1. Open a terminal, navigate to the project directory, and run:
 
 `docker-compose up --build`
+
+Docker Compose will build the `web` container and initialize the `db` container with the SQL file.
+
+2. Once the containers are up and running, open a browser and visit `http://localhost:5000/` to see the home page of your Flask API.
+
+# Step 6: Testing the Application.
+
+To interact with the /tasks endpoint:
+
+- Create a Task: Use `curl` or a tool like `Postman` to send a `POST` request:
+
+`curl -X POST http://localhost:5000/tasks -H "Content-Type: application/json" -d '{"name": "Task 1", "description": "A sample task."}'`
+
+- Get All Tasks: Visit `http://localhost:5000/tasks` in your browser, or use curl to view all tasks.
+
+
