@@ -75,3 +75,10 @@ To interact with the /tasks endpoint:
 - Get All Tasks: Visit `http://localhost:5000/tasks` in your browser, or use curl to view all tasks.
 
 
+# Conclusion.
+
+You’ve built a simple, yet powerful, multi-container application using Docker! By separating the application into multiple containers, you’re now leveraging a core principle of modern app development: modular, scalable services. This example serves as a foundation for more complex, production-ready setups that can incorporate additional services like caching, load balancing, or microservices.
+
+This project also highlights the strength of Docker Compose, allowing you to quickly and easily bring up complex systems. With this foundation, you’re well on your way to deploying robust applications in any environment.
+
+
